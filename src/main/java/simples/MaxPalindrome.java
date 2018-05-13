@@ -9,7 +9,7 @@ public class MaxPalindrome {
         for (long i = MIN; i <= MAX; i++) {
             for (long j = i; j <= MAX; j++) {
                 if (SimpleV2.isSimple(i) && SimpleV2.isSimple(j)) {
-                    long mult=i*j;
+                    long mult=(long)i*j;
                     if (Palindrome.isPalindrome(mult)) {
                         if (mult > max) {
                             max = mult;
@@ -18,7 +18,6 @@ public class MaxPalindrome {
                     }
                 }
             }
-            System.out.println(i);
         }
         System.out.println(max);
     }
@@ -76,6 +75,6 @@ public class MaxPalindrome {
     }
 
     public static void main(String[] args) {
-        mainTheBest(args);
+        mainGood(args);
     }
 }

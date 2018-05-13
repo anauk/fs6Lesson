@@ -7,7 +7,7 @@ public class SimpleV2 {
     static int[] getSimples(int min, int max) {
         int[] ints = new int[max - min + 1];
         int index=0;
-        for (int i = min; i <=max ; i++) {
+        for (int i = min; i <= max ; i++) {
             if (isSimple(i)) {
                 ints[index++]=i;
             }
@@ -23,7 +23,7 @@ public class SimpleV2 {
 
     static boolean isSimple(int number) {
         boolean simple = true;
-        for (int i = 2; i <= number-1; i++) {
+        for (int i = 2; i <= Math.sqrt(number); i++) {
             if(number%i ==0){simple=false;
                 break;
             }
