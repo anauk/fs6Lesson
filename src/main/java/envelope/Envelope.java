@@ -1,3 +1,5 @@
+package envelope;
+
 import java.util.Scanner;
 
 public class Envelope {

@@ -1,3 +1,5 @@
+package envelope;
+
 public class Envelope2 {
     static int DIMENSION = 11;
 
