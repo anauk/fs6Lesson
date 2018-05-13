@@ -23,12 +23,10 @@ public class ReverseSingleWord {
     }
 
     public static void reverse(char[] word) {
-        int len = word.length;
-        int half = (int) Math.floor(len/2);
-        for (int i = 0; i < half ; i++) {
-            word[i] ^= word[len-1-i];
-            word[len-1-i] ^= word[i];
-            word[i] ^= word[len-1-i];
+        for (int i = 0; i < word.length/2 ; i++) {
+            word[i] ^= word[word.length-1-i];
+            word[word.length-1-i] ^= word[i];
+            word[i] ^= word[word.length-1-i];
         }
     }
 }
