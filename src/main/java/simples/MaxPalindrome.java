@@ -75,6 +75,6 @@ public class MaxPalindrome {
     }
 
     public static void main(String[] args) {
-        mainGood(args);
+        mainTheBest(args);
     }
 }

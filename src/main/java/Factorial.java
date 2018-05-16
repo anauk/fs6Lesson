@@ -1,7 +1,7 @@
 public class Factorial {
 
-    public static int i = 6;
-    static int[] anArray;
+    private int valueToCalculate;
+    private int[] anArray;
 
     private static void recursive(int value) {
         int j=value;
@@ -15,30 +15,39 @@ public class Factorial {
         System.out.printf("Value is:%d\n", i);
     }
 
-    public static void main(String[] args) {
+    public static void mainStatic(String[] args) {
         final int VAL=5;
-        anArray = new int[VAL];
+//        anArray = new int[VAL];
         //int anArray = new int[VAL];
-        int f = fact(VAL);
-        System.out.println(f);
-
-/*
-        for (int j = 0; j < anArray.length; j++) {
-            int v=anArray[j];
-            System.out.println(v);
-        }
-*/
-        printArray();
+        //int f = fact(VAL);
+//        System.out.println(f);
     }
 
-    public static int fact(int value) {
+    Factorial(int val) {
+        this.valueToCalculate=val;
+        anArray = new int[val];
+    }
+
+    public static void main(String[] args) {
+        final int VAL=5;
+        Factorial factorial = new Factorial(VAL);
+        int calculated=factorial.fact();
+        System.out.println(calculated);
+        factorial.printArray();
+    }
+
+    public int fact() {
+        return fact(valueToCalculate);
+    }
+
+    public int fact(int value) {
         if (value<1) return  1;
         int factorial = value*fact(value-1);
         anArray[value-1] = factorial;
         return factorial;
     }
 
-    public static void printArray() {
+    public void printArray() {
         for (int valueFromArray : anArray) {
             System.out.println(valueFromArray);
         }
