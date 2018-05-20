@@ -1,6 +1,10 @@
 public class XorDisassembled {
+
     public static boolean xor(boolean a, boolean b) {
-        return (a|b) & !(a&b);
+        return
+                //(a|b) & !(a&b)
+                a&!b | !a&b
+                ;
     }
 
     public static void main(String[] args) {
