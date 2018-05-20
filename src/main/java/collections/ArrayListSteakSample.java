@@ -7,7 +7,8 @@ import java.util.function.Consumer;
 
 public class ArrayListSteakSample {
     public static void main(String[] args) {
-        ArrayList<Steak> steaks = new ArrayList<>();
+        List<Steak> steaks = new LinkedList<>();
+        //new ArrayList<>()
         List<String> types = Arrays.asList("Rare", "Medium", "Rare", "Well Done", "Special");
         types.forEach(new Consumer<String>() {
             @Override
@@ -16,6 +17,7 @@ public class ArrayListSteakSample {
             }
         });
 
+        System.out.println("-");
         steaks.forEach(steak -> System.out.println(steak.name()));
 
         steaks.sort(new Comparator<Steak>() {
@@ -25,6 +27,7 @@ public class ArrayListSteakSample {
             }
         });
 
+        System.out.println("-");
         steaks.forEach(steak -> System.out.println(steak.name()));
 
         steaks.sort(new Comparator<Steak>() {
@@ -34,6 +37,14 @@ public class ArrayListSteakSample {
             }
         });
 
+        System.out.println("-");
+        steaks.forEach(steak -> System.out.println(steak.name()));
+
+        steaks.remove(1);
+        System.out.println("-");
+        steaks.forEach(steak -> System.out.println(steak.name()));
+        steaks.remove(1);
+        System.out.println("-");
         steaks.forEach(steak -> System.out.println(steak.name()));
 
     }
