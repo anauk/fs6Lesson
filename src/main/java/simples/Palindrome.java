@@ -2,6 +2,7 @@ package simples;
 
 public class Palindrome {
 
+
     static public boolean isPalindrome(long value) {
         boolean pal=true;
         String valueS = Long.toString(value);
@@ -14,7 +15,7 @@ public class Palindrome {
         return pal;
     }
 
-    public static void main(String[] args) {
+    public static void main1(String[] args) {
         long[] values1 = new long[]{1,2,3,11,123321,1234321,89};
         long[] values2 = new long[]{123,1234567890};
 
