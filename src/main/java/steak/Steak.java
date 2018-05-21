@@ -17,7 +17,7 @@ public class Steak {
     }
 
     public String name() {
-        return "My name:"+this.type;
+        return "My name:"+this.type+ ", price:"+priceImplementation();
     }
 
     public void prepare() {
@@ -31,4 +31,5 @@ public class Steak {
     public int size() {
         return price()*2;
     }
+
 }
