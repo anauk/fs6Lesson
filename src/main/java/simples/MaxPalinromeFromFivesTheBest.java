@@ -1,11 +1,18 @@
 package simples;
 
-public class MaxFivePalinromeTheBest {
+public class MaxPalinromeFromFivesTheBest {
     final int MIN=10000;
     final int MAX=99999;
 
+    boolean findValue(int[]a, int v) {
+        for (int i = 0; i < a.length; i++) {
+            if (a[i]==v) return true;
+        }
+        return false;
+    }
+
     public long doFind() {
-        int[] simples = new SimpleV3(MIN, MAX).array();
+        int[] simples = new SimpleV4(MIN, MAX).array();
         long max=0;
         PalindromeWoString p = new PalindromeWoString();
         for (int i = 0; i < simples.length; i++) {
@@ -21,15 +28,15 @@ public class MaxFivePalinromeTheBest {
     }
 
     public static void main(String[] args) {
-        final int ITER_COUNT=20;
-        MaxFivePalinromeTheBest p = new MaxFivePalinromeTheBest();
+        final int ITER_COUNT=10;
+        MaxPalinromeFromFivesTheBest p = new MaxPalinromeFromFivesTheBest();
         long l=System.currentTimeMillis();
         long max=0;
         for (int i = 0; i < ITER_COUNT; i++) {
             max=p.doFind();
         }
         l=System.currentTimeMillis()-l;
-        System.out.printf("Maximum:%s\n",max);
+        System.out.printf("Maximum:%d\n",max);
         System.out.printf("Time spent:%d\n", l/ITER_COUNT);
     }
 }

@@ -14,6 +14,7 @@ public class SimpleV0 {
     }
 
     public static void main(String[] args) {
-        System.out.println(isSimple(26543));
+        System.out.println(isSimple(69143));
+        System.out.println(isSimple(91009));
     }
 }
