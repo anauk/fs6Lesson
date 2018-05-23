@@ -17,9 +17,13 @@ public class MapSample {
         System.out.println(v.name());
         System.out.println(map.get("victor").name());
 
+
+
+    }
+
+    public static void main2(String[] args) {
         ArrayList<Integer> line = new ArrayList<>();
         ArrayList<ArrayList<Integer>> board = new ArrayList<>();
         ArrayList<ArrayList<ArrayList<Integer>>> cube = new ArrayList<>();
-
     }
 }

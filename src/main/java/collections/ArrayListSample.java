@@ -22,6 +22,7 @@ public class ArrayListSample {
 
         ints.sort(comparatorUp);
         ints.forEach(integer -> System.out.println("element is:"+integer));
+
         ints.sort(comparatorDown);
         ints.forEach(integer -> System.out.println("element is:"+integer));
     }
