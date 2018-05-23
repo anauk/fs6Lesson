@@ -32,8 +32,9 @@ public class ArrayListSort1 {
         };
 
         Collections.sort(list, comp);
+        // list.sort(comp);
         printArray(list);
-        //System.out.println(list);
+        // System.out.println(list);
     }
 
     private static List<Integer> inputArray(Scanner in) {
