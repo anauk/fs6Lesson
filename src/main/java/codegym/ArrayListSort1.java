@@ -10,12 +10,7 @@ public class ArrayListSort1 {
                 input
                 //System.in
         );
-        int N = in.nextInt();
-        List<Integer> list = new ArrayList<>();
-
-        for (int i = 0; i < N; i++) {
-            list.add(in.nextInt());
-        }
+        List<Integer> list = inputArray(in);
 
         Comparator<Integer> comp = new Comparator<Integer>() {
             @Override
@@ -37,7 +32,22 @@ public class ArrayListSort1 {
         };
 
         Collections.sort(list, comp);
+        printArray(list);
+        //System.out.println(list);
+    }
 
-        System.out.println(list);
+    private static List<Integer> inputArray(Scanner in) {
+        int N = in.nextInt();
+        List<Integer> list = new ArrayList<>();
+        for (int i = 0; i < N; i++) {
+            list.add(in.nextInt());
+        }
+        return list;
+    }
+
+    private static void printArray(List<Integer> list) {
+        for (int i = 0; i < list.size(); i++) {
+            System.out.print(list.get(i)+" ");
+        }
     }
 }
