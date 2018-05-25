@@ -20,10 +20,16 @@ public class ArrayListSortII {
             }
         };
 
-
         employees.forEach(consumer);
-        employees.forEach(e -> System.out.println(e.fullName()));
 
+        employees.forEach(e -> System.out.println(e.fullName()));
+        employees.forEach(new Consumer<Employee>() {
+            @Override
+            public void accept(Employee employee) {
+                employee.print();
+            }
+        });
+        employees.forEach(Employee::print);
 
         System.out.println("=============");
 

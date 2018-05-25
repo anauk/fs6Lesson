@@ -24,4 +24,8 @@ public class Employee {
     public String fullName() {
         return id+" " + beginYear + " " + name + " "+salary;
     }
+
+    public void print() {
+        System.out.println(this.fullName());
+    }
 }
