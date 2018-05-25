@@ -8,7 +8,9 @@ public class Data {
     public List<Employee> get() {
         //Scanner in = new Scanner(System.in);
         Scanner in = new Scanner("6\n"+
-                "1000 Alex 2001 300 Masha 2006 250 Sasha 1012 400 Dima 2002 100 Sergey 2007 1500 Dima 2016");
+                "1000 Alex 2001\n"
+                +"300 Masha 2006\n"
+                +"250 Sasha 1012 400 Dima 2002 100 Sergey 2007 1500 Dima 2016");
         int N = in.nextInt();
         List<Employee> employees = new ArrayList<>(N);
         for (int i = 0; i < N; i+=2) {

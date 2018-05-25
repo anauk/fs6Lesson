@@ -1,8 +1,11 @@
 package codegym.sort2;
 
+import java.util.Collections;
 import java.util.Comparator;
+import java.util.HashMap;
 import java.util.List;
 import java.util.function.Consumer;
+import java.util.stream.Collectors;
 
 public class ArrayListSortII {
     public static void main(String[] args) {
@@ -18,7 +21,6 @@ public class ArrayListSortII {
         };
 
         employees.forEach(consumer);
-
         employees.forEach(e -> System.out.println(e.fullName()));
         employees.forEach(new Consumer<Employee>() {
             @Override
@@ -29,7 +31,6 @@ public class ArrayListSortII {
         employees.forEach(Employee::print);
 
         System.out.println("=============");
-
 
         employees.sort(new Comparator<Employee>() {
             @Override
@@ -48,5 +49,14 @@ public class ArrayListSortII {
             Employee e = employees.get(i);
             System.out.println(e.fullName());
         }
+
+        Collections.sort(employees);
+
+        String header="<html><body><table>";
+        String footer="</table></body></html>";
+        String body = employees.stream().map(e->e.html()).collect(Collectors.joining());
+        System.out.println(header+body+footer);
+
+
     }
 }
