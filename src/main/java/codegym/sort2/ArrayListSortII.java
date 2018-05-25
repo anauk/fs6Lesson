@@ -5,9 +5,6 @@ import java.util.List;
 import java.util.function.Consumer;
 
 public class ArrayListSortII {
-
-
-
     public static void main(String[] args) {
         List<Employee> employees = new Data().get();
 
