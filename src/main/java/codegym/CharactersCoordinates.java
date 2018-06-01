@@ -13,7 +13,6 @@ public class CharactersCoordinates {
         String line = in.nextLine();
         PriorityQueue<Character> pqKeys = new PriorityQueue<>();
         //PriorityQueue<Map.Entry<Character, List<Integer>>> entries = new PriorityQueue<>((o1, o2) -> o1.getKey()-o2.getKey());
-
         for (int i = 0; i < line.length(); i++){
             char symbol = line.charAt(i);
             if (Character.isLetter(symbol)) {
