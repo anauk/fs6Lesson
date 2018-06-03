@@ -3,6 +3,7 @@ package generics;
 import steak.Steak;
 
 import java.util.ArrayList;
+import java.util.stream.Collectors;
 
 public class GenTest {
     public static int get(int val) {
@@ -24,6 +25,18 @@ public class GenTest {
 
         return 1;
     }
+
+    public static int get(Object val) {
+        if (val instanceof Integer) {
+            //(Integer)val
+        }
+        if (val instanceof String) {
+            //(String)val.
+        }
+
+        return 1;
+    }
+
 
 
     public static void main(String[] args) {
@@ -55,10 +68,12 @@ public class GenTest {
 
 
 
-        ArrayList<Integer> al = new ArrayList<>();
+        ArrayList<Steak> al = new ArrayList<>();
+/*
         al.add(0);
         Integer intv = al.get(0);
-
+        Collectors
+*/
 
     }
 
