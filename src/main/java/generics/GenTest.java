@@ -56,8 +56,8 @@ public class GenTest {
 
 
         ArrayList<Integer> al = new ArrayList<>();
-        al.add(1);
-        al.get(0);
+        al.add(0);
+        Integer intv = al.get(0);
 
 
     }
