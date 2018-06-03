@@ -9,7 +9,7 @@ public class Coordinates_v2 {
     public static void main(String[] args) {
         String line = "This is test string";
         String done = IntStream
-                .range(0, line.length()) // 0..9
+                .range(0, line.length()) // 0..line.length
                 .mapToObj(index -> new Pair(line.charAt(index), index))
                 .filter(pair -> Character.isLetter(pair.ch()))  // Pair<>...
                 .collect(groupingBy(Pair::ch, mapping(Pair::pos, toList())))

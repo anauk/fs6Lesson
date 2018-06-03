@@ -19,7 +19,7 @@ public class XorDisassembled {
             boolean e=a^b;
             boolean x=xor(a,b);
             String s = x==e?"OK":"ERR";
-            System.out.printf("Value 1:%5s, value 2:%5s, calculated:%5s, expected:%5s, %s\n",a,b,x,e,s);
+            System.out.printf("Value 1:%5s, Value 2:%5s, calculated:%5s, expected:%5s, %s\n",a,b,x,e,s);
         }
     }
 }

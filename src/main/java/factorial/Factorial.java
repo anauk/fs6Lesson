@@ -42,7 +42,7 @@ public class Factorial {
     }
 
     public void printArray() {
-        System.out.printf("Factorial for value %d is %d\n",
+        System.out.printf("Factorial for Value %d is %d\n",
                 this.valueToCalculate,
                 this.anArray[this.anArray.length-1]);
         for (int valueFromArray : this.anArray) {
