@@ -3,6 +3,10 @@ package iter;
 import java.util.Iterator;
 
 public class MonthsTest {
+    public static void m1(String s) {
+        System.out.println(s);
+    }
+
     public static void main1(String[] args) {
         Months months = new Months();
 
@@ -25,5 +29,6 @@ public class MonthsTest {
         Months m = new Months();
         //m.forEach(s -> System.out.println(s));
         m.forEach(System.out::println);
+        m.forEach(MonthsTest::m1);
     }
 }
