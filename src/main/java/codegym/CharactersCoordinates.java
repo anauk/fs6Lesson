@@ -18,13 +18,6 @@ public class CharactersCoordinates {
                 if (!pqKeys.contains(symbol)) {
                     pqKeys.add(symbol);
                 }
-/*
-                if (map.containsKey(symbol)) {
-                    positions = map.get(symbol);
-                } else {
-                    positions = new ArrayList<>();
-                }
-*/
                 ArrayList<Integer> positions = map.getOrDefault(symbol, new ArrayList<>());
                 positions.add(i);
                 map.put(symbol, positions);
