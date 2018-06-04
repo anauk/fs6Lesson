@@ -9,7 +9,7 @@ import java.util.stream.Stream;
 
 import static java.util.stream.Collectors.toList;
 
-public class IntStream {
+public class IntStreamSample {
     public static void main(String[] args) {
         Optional<Integer> min = Stream
                 .generate(new HiddenGenerator())
