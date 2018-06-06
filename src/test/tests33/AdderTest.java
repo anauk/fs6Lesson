@@ -22,4 +22,11 @@ public class AdderTest {
         int calculated = a.get();
         assertEquals(expected, calculated);
     }
+
+    @Test
+    public void test3() {
+        TestData t = new TestData(1,1,2);
+        assertEquals(t.result(), new Adder(t.val1(), t.val2()).get());
+    }
+
 }
