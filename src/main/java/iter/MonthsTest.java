@@ -18,8 +18,8 @@ public class MonthsTest {
 
     public static void main2(String[] args) {
         Months months = new Months();
-        for (String m : months) {
-            System.out.println(m);
+        for (String eachItem : months) {
+            System.out.println(eachItem);
         }
     }
 
