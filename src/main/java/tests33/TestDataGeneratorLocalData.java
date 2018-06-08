@@ -2,7 +2,7 @@ package tests33;
 
 import java.util.Iterator;
 
-public class TestDataGenerator implements Iterable<TestData> {
+public class TestDataGeneratorLocalData implements Iterable<TestData> {
     private TestData[] data = {
             new TestData(1,1,2),
             new TestData(10,20,30),

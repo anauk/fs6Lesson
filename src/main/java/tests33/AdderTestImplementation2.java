@@ -55,7 +55,7 @@ public class AdderTestImplementation2 {
     }
 
     public static void main5(String[] args) {
-        TestDataGenerator testGen = new TestDataGenerator();
+        TestDataGeneratorLocalData testGen = new TestDataGeneratorLocalData();
         for (TestData testItem : testGen) {
             int d1=testItem.val1();
             int d2=testItem.val2();
