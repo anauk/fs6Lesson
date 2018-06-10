@@ -1,4 +1,4 @@
-package tests33;
+package datagenerator;
 
 public class TestData {
     private final int v1;

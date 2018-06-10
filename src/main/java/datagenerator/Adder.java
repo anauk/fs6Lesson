@@ -1,4 +1,4 @@
-package tests33;
+package datagenerator;
 
 public class Adder {
     private final int val1;

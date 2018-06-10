@@ -1,4 +1,4 @@
-package tests33;
+package datagenerator;
 
 public class Connect {
     public Connect(String address) {

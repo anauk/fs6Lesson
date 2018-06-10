@@ -1,4 +1,4 @@
-package tests33;
+package datagenerator;
 
 import java.util.Iterator;
 
