@@ -1,11 +1,10 @@
+import com.sun.org.apache.xpath.internal.SourceTree;
 import exceptions.Div;
 
-import java.util.ArrayList;
-import java.util.Comparator;
-import java.util.List;
+import java.util.*;
 
 public class DivTest {
-    public static void main(String[] args) {
+    public static void main5(String[] args) {
         List<Integer> list = new ArrayList<>();
         list.add(67);
         list.add(34);
@@ -43,7 +42,7 @@ public class DivTest {
         return list.isEmpty() ? -1 : list.stream().min((o1, o2) -> o1-o2).get();
     }
 
-    public static void main1(String[] args) {
+    public static void main4(String[] args) {
         int i1=10;
         int i2=0;
 
@@ -53,5 +52,45 @@ public class DivTest {
             Div d = new Div(i1, i2);
             System.out.printf("%d/%d = %d", i1, i2, d.get());
         }
+    }
+
+    public static void main6(String[] args) {
+        int i1=10;
+        int i2=0;
+        try {
+            Div d = new Div(i1, i2);
+            System.out.printf("%d/%d = %d", i1, i2, d.get());
+        } catch (ArithmeticException e) {
+            System.out.println("please don't divide by zero(((");
+        }
+    }
+
+    public static void main9(String[] args) {
+        try {
+            int i = Integer.parseInt("11A");
+            System.out.println(i);
+        } catch (NumberFormatException e) {
+            System.out.println("given string can't be converted to int");
+        }
+    }
+
+    public static void main(String[] args) {
+        Deque<Integer> dq = new LinkedList<>();
+        //dq.add(13);
+
+        try {
+            Integer el1 = dq.remove(); // exception
+        } catch (NoSuchElementException e) {
+            System.out.println("no elements");
+        }
+
+        Integer v = dq.poll();
+        if (v==null) {
+            System.out.println("no elements");
+        } else {
+            System.out.println(v);
+        }
+
+
     }
 }
