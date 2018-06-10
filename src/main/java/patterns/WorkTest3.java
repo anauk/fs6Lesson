@@ -7,8 +7,10 @@ public class WorkTest3 {
         Scanner in = new Scanner(System.in);
         int i = in.nextInt();
 
-        Workable built = WorkBuilder.build(i);
+        Workable built = WorkFactory.build(i);
 
-        built.work();
+        Behavior behavior = new Behavior(built);
+
+        behavior.startAndRun();
     }
 }

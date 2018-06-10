@@ -1,6 +1,6 @@
 package patterns;
 
-public class WorkBuilder {
+public class WorkFactory {
     public static void main(String[] args) {
         Worker1 w1 = new Worker1();
         if (w1 instanceof Worker1) {
