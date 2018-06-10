@@ -1,3 +1,5 @@
+package undefined;
+
 public class XorDisassembled {
 
     public static boolean xor(boolean a, boolean b) {
