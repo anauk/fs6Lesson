@@ -13,7 +13,50 @@ import java.util.zip.ZipInputStream;
 import java.util.zip.ZipOutputStream;
 
 public class Lesson1 {
+    public static void main11(String[] args) {
+        //File f = new File("/home/DI/arykhalskiy/IdeaProjects/fs6a/src/main/java/io/test.txt");
+        File f = new File("./src/main/java/io/test.txt");
+        //File f = new File("test.txt");
+        //f.delete();
+
+        File absoluteFile = f.getAbsoluteFile();
+        System.out.println(absoluteFile);
+        System.out.println(f.exists());
+
+        //InputStream is;
+        //OutputStream os;
+        //is.read();
+        //os.write();
+    }
+
+    public static void main(String[] args) throws FileNotFoundException {
+        // how to read via stream
+        FileInputStream fis = new FileInputStream("1.txt");
+        // how to write via stream
+        FileOutputStream fos = new FileOutputStream("1.txt");
+
+        // specific data readWrite
+        // read
+        DataInputStream dis = new DataInputStream(fis);
+        // write
+        DataOutputStream dos = new DataOutputStream(fos);
+
+        BufferedInputStream bis;
+        BufferedOutputStream bos;
+        // sample
+
+        FileInputStream fis1 = new FileInputStream("1.txt");
+        BufferedInputStream bis1 = new BufferedInputStream(fis1,10000);
+        DataInputStream dis1 = new DataInputStream(fis1);
+        DataInputStream dis2 = new DataInputStream(bis1);
+
+        DataInputStream dis3 = new DataInputStream(new BufferedInputStream(new FileInputStream("1.txt")));
+    }
+
+
+
     public static void main1(String[] args) throws IOException, ClassNotFoundException {
+
         // general
         DataOutput out;
         DataInput in;
@@ -162,7 +205,7 @@ public class Lesson1 {
         });
     }
 
-    public static void main(String[] args) throws IOException {
+    public static void main9(String[] args) throws IOException {
         Files.walkFileTree(Paths.get("src/main/java/iter/"), new SimpleFileVisitor<Path>() {
             @Override
             public FileVisitResult visitFile(Path file, BasicFileAttributes attrs) throws IOException {
