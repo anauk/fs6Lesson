@@ -12,7 +12,7 @@ import java.util.stream.Stream;
 import java.util.zip.ZipInputStream;
 import java.util.zip.ZipOutputStream;
 
-public class Sample1 {
+public class Lesson1 {
     public static void main1(String[] args) throws IOException, ClassNotFoundException {
         // general
         DataOutput out;
