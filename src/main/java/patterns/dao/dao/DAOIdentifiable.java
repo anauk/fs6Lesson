@@ -1,8 +1,8 @@
-package patterns.dao;
+package patterns.dao.dao;
 
 import java.util.List;
 
-public interface DAO<T> {
+public interface DAOIdentifiable<T> {
     T get(int id);
     List<T> getAll();
     boolean insert(T c);

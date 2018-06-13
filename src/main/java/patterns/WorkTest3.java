@@ -1,5 +1,7 @@
 package patterns;
 
+import patterns.facade.Behavior;
+
 import java.util.Scanner;
 
 public class WorkTest3 {

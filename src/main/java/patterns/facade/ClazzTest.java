@@ -1,4 +1,4 @@
-package patterns;
+package patterns.facade;
 
 import java.util.*;
 import java.util.function.Consumer;

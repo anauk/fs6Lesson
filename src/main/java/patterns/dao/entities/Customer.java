@@ -1,9 +1,11 @@
-package patterns.dao;
+package patterns.dao.entities;
+
+import patterns.dao.dao.Identifiable;
 
 import java.io.InputStream;
 import java.io.OutputStream;
 
-public class Customer {
+public class Customer implements Identifiable {
     private int id;
     private String name;
 
@@ -15,13 +17,7 @@ public class Customer {
         this.name = name;
     }
 
-/*
-    public Customer(InputStream stream) {
-        this.id = stream.;
-        this.name = stream.;
-    }
-
-*/
+    @Override
     public int getId() {
         return id;
     }
@@ -41,9 +37,5 @@ public class Customer {
     @Override
     public String toString() {
         return String.format("Customer: [id:%d, name:%s]", this.id, this.name);
-    }
-
-    public void store(OutputStream stream) {
-
     }
 }

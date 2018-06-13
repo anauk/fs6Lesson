@@ -1,4 +1,6 @@
-package patterns;
+package patterns.facade;
+
+import patterns.Workable;
 
 public class Behavior {
     private final Workable w;

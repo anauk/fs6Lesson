@@ -1,4 +1,4 @@
-package patterns;
+package patterns.facade;
 
 import java.util.ArrayList;
 import java.util.Collections;

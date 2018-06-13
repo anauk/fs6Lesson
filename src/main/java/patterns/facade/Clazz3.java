@@ -1,4 +1,4 @@
-package patterns;
+package patterns.facade;
 
 public class Clazz3 implements Driveable {
     private final Class3 element;

@@ -1,5 +1,7 @@
 package patterns.dao;
 
+import patterns.dao.entities.Customer;
+
 public class CustomerTest {
     public static void case1() {
         Customer cust = new Customer();

@@ -1,4 +1,4 @@
-package patterns;
+package patterns.facade;
 
 public class Class3 {
     public void print_z(String s) {
