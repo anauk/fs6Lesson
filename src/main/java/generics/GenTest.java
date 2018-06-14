@@ -1,9 +1,8 @@
 package generics;
 
-import steak.Steak;
+import oop.steak.Steak;
 
 import java.util.ArrayList;
-import java.util.stream.Collectors;
 
 public class GenTest {
     public static int get(int val) {

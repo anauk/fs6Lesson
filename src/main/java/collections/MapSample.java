@@ -1,6 +1,6 @@
 package collections;
 
-import steak.Steak;
+import oop.steak.Steak;
 
 import java.util.ArrayList;
 import java.util.HashMap;

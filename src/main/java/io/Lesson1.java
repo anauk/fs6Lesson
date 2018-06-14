@@ -206,13 +206,24 @@ public class Lesson1 {
     }
 
     public static void main9(String[] args) throws IOException {
-        Files.walkFileTree(Paths.get("src/main/java/iter/"), new SimpleFileVisitor<Path>() {
+        Files.walkFileTree(Paths.get("src/main/java/core.iter/"), new SimpleFileVisitor<Path>() {
             @Override
             public FileVisitResult visitFile(Path file, BasicFileAttributes attrs) throws IOException {
                 System.out.println(file);
                 return FileVisitResult.CONTINUE;
             }
         });
+    }
+
+    public static void main99(String[] args) throws IOException {
+        // how to read the stings
+        FileInputStream fis = new FileInputStream("1.txt");
+        InputStreamReader isr = new InputStreamReader(fis);
+        BufferedReader br = new BufferedReader(isr);
+        String line;
+        while ((line=br.readLine())!=null) {
+            System.out.println(line);
+        }
     }
 
 }
