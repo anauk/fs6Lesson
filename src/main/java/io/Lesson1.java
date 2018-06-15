@@ -1,5 +1,7 @@
 package io;
 
+import sun.net.www.http.HttpCaptureInputStream;
+
 import java.io.*;
 import java.nio.charset.Charset;
 import java.nio.charset.StandardCharsets;
@@ -7,6 +9,7 @@ import java.nio.file.*;
 import java.nio.file.attribute.BasicFileAttributes;
 import java.util.List;
 import java.util.RandomAccess;
+import java.util.Scanner;
 import java.util.function.Consumer;
 import java.util.stream.Stream;
 import java.util.zip.ZipInputStream;
@@ -29,34 +32,7 @@ public class Lesson1 {
         //os.write();
     }
 
-    public static void main(String[] args) throws FileNotFoundException {
-        // how to read via stream
-        FileInputStream fis = new FileInputStream("1.txt");
-        // how to write via stream
-        FileOutputStream fos = new FileOutputStream("1.txt");
-
-        // specific data readWrite
-        // read
-        DataInputStream dis = new DataInputStream(fis);
-        // write
-        DataOutputStream dos = new DataOutputStream(fos);
-
-        BufferedInputStream bis;
-        BufferedOutputStream bos;
-        // sample
-
-        FileInputStream fis1 = new FileInputStream("1.txt");
-        BufferedInputStream bis1 = new BufferedInputStream(fis1,10000);
-        DataInputStream dis1 = new DataInputStream(fis1);
-        DataInputStream dis2 = new DataInputStream(bis1);
-
-        DataInputStream dis3 = new DataInputStream(new BufferedInputStream(new FileInputStream("1.txt")));
-    }
-
-
-
-    public static void main1(String[] args) throws IOException, ClassNotFoundException {
-
+    public static void main12(String[] args) throws FileNotFoundException {
         // general
         DataOutput out;
         DataInput in;
@@ -79,6 +55,7 @@ public class Lesson1 {
 
         // rewind feature
         PushbackInputStream pbis = new PushbackInputStream(fis);
+        //pbis.unread();
 
         // unzip on the fly
         FileInputStream fileStreamZipped = new FileInputStream("1.zip");
@@ -90,26 +67,111 @@ public class Lesson1 {
         ZipOutputStream zipous = new ZipOutputStream(fos2);
         DataOutputStream dos2 = new DataOutputStream(zipous);
 
+    }
+
+    public static void main88(String[] args) throws FileNotFoundException {
+        // how to read via stream
+        FileInputStream fis = new FileInputStream("1.txt");
+        // how to write via stream
+        FileOutputStream fos = new FileOutputStream("1.txt");
+        // specific data readWrite
+        // read
+        DataInputStream dis = new DataInputStream(fis);
+        // write
+        DataOutputStream dos = new DataOutputStream(fos);
+
+
+        BufferedInputStream bis;
+        BufferedOutputStream bos;
+        // sample
+
+        FileInputStream fis1 = new FileInputStream("1.txt");
+        BufferedInputStream bis1 = new BufferedInputStream(fis1,10000);
+        DataInputStream dis1 = new DataInputStream(fis1);
+        DataInputStream dis2 = new DataInputStream(bis1);
+
+        DataInputStream dis3 = new DataInputStream(new BufferedInputStream(new FileInputStream("1.txt"), 1000));
+        DataOutputStream dos3 = new DataOutputStream(new BufferedOutputStream(new FileOutputStream("2.txt"), 2000));
+    }
+
+    public static void main666(String[] args) {
+        //String s="привет";
+        String s="пр";
+        System.out.println(s.length());
+        byte[] bytes = s.getBytes();
+        System.out.println(bytes.length);
+        char[] chars = s.toCharArray();
+        for (int i = 0; i < chars.length; i++) {
+            int aChar = chars[i];
+            System.out.printf(aChar+" ");
+        }
+        for (int i = 0; i < chars.length; i++) {
+            int aChar = chars[i];
+            System.out.printf(Integer.toBinaryString(aChar)+" ");
+        }
+        System.out.println((int)s.charAt(0));
+    }
+
+    public static void main13(String[] args) throws FileNotFoundException {
+        FileReader r = new FileReader("1.txt");
+
+
+    }
+
+    public static void main14(String[] args) throws FileNotFoundException {
+        File file = new File("./src/main/java/io/1.txt");
+        PrintWriter pw = new PrintWriter(file);
+        pw.print(13);
+        pw.close();
+    }
+
+    public static void main15(String[] args) throws FileNotFoundException {
+        File file = new File("11");
+        BufferedInputStream bis1 = new BufferedInputStream(new FileInputStream(file));
+        Scanner in = new Scanner(new File("./src/main/java/io/1.txt"));
+    }
+
+    public static void main16(String[] args) throws FileNotFoundException {
         // if we are dealing with TEXT only
         PrintWriter pw = new PrintWriter(new File("file_toWrite.txt"));
         PrintWriter pw2 = new PrintWriter(new FileOutputStream(new File("file_toWrite.txt")));
         //pw.write
-
         // how to read the file
+    }
+
+    public static void main17(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new FileReader(new File("1.txt")));
-        String line = br.readLine();
-        Stream<String> lines1 = br.lines();
-        // how to wrire to the file
+        //String line = br.readLine();
+        String line;
+        while ((line = br.readLine())==null){
+            line.charAt(0);
+        }
+    }
+
+    public static void main18(String[] args) throws FileNotFoundException {
+        BufferedReader br = new BufferedReader(new FileReader(new File("1.txt")));
+        Stream<String> lines = br.lines();
+        //lines.forEach();
+    }
+
+    public static void main19(String[] args) throws IOException {
         BufferedWriter bw = new BufferedWriter(new FileWriter(new File("file.txt")));
         bw.write("hello");
+    }
 
-        // how to read (is)
-        Path path = Paths.get("file.txt");
+    public static void main(String[] args) throws IOException {
+        Path path = Paths.get("src/main/java/io","file.txt");
+        byte[] bytes = Files.readAllBytes(path);
         Charset cs = StandardCharsets.UTF_8;
-        String s = new String(Files.readAllBytes(path), cs);
+        String s = new String(bytes, cs);
         List<String> sl = Files.readAllLines(path, cs);
         // large file (lazy load)
         Stream<String> lines = Files.lines(path, cs);
+    }
+
+    // https://software.intel.com/sites/default/files/Figure8.jpg
+
+    public static void main1(String[] args) throws IOException, ClassNotFoundException {
 
         /* randomAccess
             rws flushes the contents of the file and the modification date of the file.
@@ -132,6 +194,11 @@ public class Lesson1 {
         ByteArrayOutputStream baos = new ByteArrayOutputStream();
         baos.write(55);
         baos.write(77);
+        baos.write(77);
+        baos.write(77);
+        baos.write(77);
+        byte[] bytes = baos.toByteArray();
+
         ByteArrayInputStream bais = new ByteArrayInputStream(baos.toByteArray());
         int read = bais.read();
     }
