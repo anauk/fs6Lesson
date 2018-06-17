@@ -1,5 +1,9 @@
 package io;
 
+import logging.Sample1;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
 import java.io.*;
 import java.nio.file.Files;
 import java.util.ArrayList;
@@ -9,6 +13,8 @@ import java.util.function.Consumer;
 import java.util.stream.Stream;
 
 public class Example1 {
+    static Logger log = LoggerFactory.getLogger(Example1.class);
+
     public static void main(String[] args) throws IOException {
         File file = new File("src/main/java/io", "strings.txt");
         BufferedReader br = new BufferedReader(new FileReader(file));
@@ -17,6 +23,7 @@ public class Example1 {
         String s = br.readLine();
         while(s!=null){
          strings.add(s);
+         log.trace("String read:"+s);
          s = br.readLine();
      }
 
@@ -27,7 +34,8 @@ public class Example1 {
         strings.forEach(new Consumer<String>() {
             @Override
             public void accept(String s) {
-                System.out.println(s);
+
+                //System.out.println(s);
             }
         });
         File stringSorted = new File("src/main/java/io","StringSorted.txt");
@@ -36,8 +44,10 @@ public class Example1 {
             @Override
             public void accept(String s) {
                 try {
+                    log.info("String write:"+s);
                     bw.write(s);
                     bw.write("\n");
+                    //bw.write(s+"\n");
                 } catch (IOException ignored) { }
             }
         });

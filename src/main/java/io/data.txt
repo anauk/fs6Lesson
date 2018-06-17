@@ -1,0 +1,9 @@
+Name: Alex
+Salary: 100
+
+Name: Dima
+Salary: 50
+zzzz
+Name: Sergey
+Salary: 70
+
