@@ -170,6 +170,7 @@ public class Lesson1 {
     }
 
     // https://software.intel.com/sites/default/files/Figure8.jpg
+    // http://i.voenmeh.ru/kafi5/Kam.loc/inform/UTF-8.htm
 
     public static void main1(String[] args) throws IOException, ClassNotFoundException {
 
