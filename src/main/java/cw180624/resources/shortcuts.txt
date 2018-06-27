@@ -1,0 +1,8 @@
+Shift+F6 - Rename
+Ctrl+Alt+L - Reformat (pretty code)
+Ctrl+P - view parameters/constructors
+
+psvm
+sout
+iter
+fori
