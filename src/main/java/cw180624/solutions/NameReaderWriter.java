@@ -20,7 +20,7 @@ public class NameReaderWriter {
       names.add(name);
     }
 
-    // append: true в конструкторе FileWriter - позволяет дописывать информацию в файл, не удаляя из него содержимое, которые там было до этого
+    // append: true в конструкторе FileWriter - позволяет дописывать информацию в файл, не удаляя из него содержимое, которое там было до этого
     BufferedWriter writer = new BufferedWriter(new FileWriter("src/main/java/cw180624/resources/unique_names.txt", true));
 
     for (String name : names) {
