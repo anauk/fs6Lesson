@@ -16,6 +16,13 @@
 Конец класса говорит, какой тип потока мы оборачиваем в этот декоратор (`InputStream, OutputStream, Reader, Writer`). На выходе мы обязательно получим такой же тип потока (`BufferedWriter` принимает в конструкторе любой `Writer`, и сам имеет тип также `Writer`)
 
 3. Классы-адаптеры. Позволяют конвертировать потоки байтов/символов друг в друга. `InputStreamReader`, `OutputStreamWriter` (присутствуют в JDK), `ReaderInputStream`, `WriterOutputStream` (реализованы во внешних библиотеках, которые можно подключить, например, с помощью Мавена)
+Начало класса говорит какой тип потока идет на вход
+Конец класса говорит, какой тип потока мы получим на выходе
+Возможные варианты преобразования
+`Reader -> InputStream (класс ReaderInputStream)`
+`InputStream -> Reader (класс InputStreamReader)`
+`Writer -> OutputStream (класс WriterOutputStream)`
+`OutputStream -> Writer (класс OutputStreamWriter)`
 
 Общие схема создания потоков:
 
