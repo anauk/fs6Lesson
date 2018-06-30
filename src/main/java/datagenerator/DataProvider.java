@@ -19,14 +19,18 @@ public class DataProvider {
             } else {
                 return new TestDataGeneratorFileRemote("www.prom.ua/cache/data.xls");
             }
+        } catch (SuperSmartNoInternetException e) {
+            //e.printStackTrace();
+        } catch (Exception_1 e) {
+
+            e.printStackTrace();
         } catch (IOException e) {
+            // server not response
             try {
                 return new TestDataGeneratorFileLocal("data.txt");
             } catch (IOException e1) {
                 return new TestDataGeneratorLocalData();
             }
-        } catch (Exception_1 e) {
-            e.printStackTrace();
         }
         return null;
     }

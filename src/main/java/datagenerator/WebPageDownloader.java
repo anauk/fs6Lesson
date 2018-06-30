@@ -6,10 +6,10 @@ import java.util.Iterator;
 public class WebPageDownloader implements Iterable<TestData> {
     private final String address;
 
-    public WebPageDownloader(String address) throws Exception_1, IOException {
+    public WebPageDownloader(String address) throws Exception_1, IOException, SuperSmartNoInternetException {
         this.address = address;
         boolean noIternet=true;
-        if (noIternet) throw new Exception_1("no internet");
+        if (noIternet) throw new SuperSmartNoInternetException("no internet");
     }
 
     String get() throws IOException {
