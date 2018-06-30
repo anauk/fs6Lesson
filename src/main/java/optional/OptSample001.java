@@ -1,10 +1,8 @@
 package optional;
 
+import java.util.Optional;
 import java.util.OptionalInt;
-import java.util.function.IntConsumer;
-import java.util.function.IntFunction;
-import java.util.function.IntSupplier;
-import java.util.function.Supplier;
+import java.util.function.*;
 import java.util.stream.Collectors;
 import java.util.stream.IntStream;
 import java.util.stream.Stream;
@@ -58,8 +56,8 @@ public class OptSample001 {
         System.out.println(s1);
     }
 
-    public static void main(String[] args) {
-        Stream.generate(new Supplier<String>() {
+    public static void main5(String[] args) {
+        Optional<String> first = Stream.generate(new Supplier<String>() {
             @Override
             public String get() {
                 return IntStream.generate(() -> 'A' + (int) (26 * Math.random()))
@@ -68,12 +66,25 @@ public class OptSample001 {
                         .collect(Collectors.joining(""));
             }
         })
-                .limit(5);
-        //.filter(s -> s.startsWith("X"))
-                //.findFirst()
+                .limit(0)
+                //.filter(s -> s.startsWith("X"))
+                .findFirst();
+        //.ifPresent(null);
                 //.orElseThrow((Supplier<? extends RuntimeException>) () -> new IllegalArgumentException("nothing...;("));
                 //.orElseThrow(()->new IllegalArgumentException("nothing...;("));
                 //.orElseThrow(IllegalArgumentException::new);
         //.forEach(System.out::println);
        // System.out.println(s1);
-    }}
+    }
+
+    public static void main(String[] args) {
+        Optional<String> opt1 = Optional.of("THE VALUE");
+        Optional<String> opt2 = Optional.empty();
+        Optional<String> opt3 = Optional.ofNullable(null);
+        opt1.ifPresent(System.out::println);
+        opt2.ifPresent(System.out::println);
+        opt3.ifPresent(System.out::println);
+
+
+    }
+}
