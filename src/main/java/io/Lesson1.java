@@ -12,6 +12,7 @@ import java.util.RandomAccess;
 import java.util.Scanner;
 import java.util.function.Consumer;
 import java.util.stream.Stream;
+import java.util.zip.ZipEntry;
 import java.util.zip.ZipInputStream;
 import java.util.zip.ZipOutputStream;
 
@@ -46,6 +47,7 @@ public class Lesson1 {
         // specific data readWrite
         // read
         DataInputStream dis = new DataInputStream(fis);
+
         // write
         DataOutputStream dos = new DataOutputStream(fos);
 
@@ -55,7 +57,8 @@ public class Lesson1 {
 
         // rewind feature
         PushbackInputStream pbis = new PushbackInputStream(fis);
-        //pbis.unread();
+        //pbis.unread(12);
+
 
         // unzip on the fly
         FileInputStream fileStreamZipped = new FileInputStream("1.zip");
@@ -159,7 +162,7 @@ public class Lesson1 {
         bw.write("hello");
     }
 
-    public static void main(String[] args) throws IOException {
+    public static void main20(String[] args) throws IOException {
         Path path = Paths.get("src/main/java/io","file.txt");
         byte[] bytes = Files.readAllBytes(path);
         Charset cs = StandardCharsets.UTF_8;
@@ -200,8 +203,11 @@ public class Lesson1 {
         baos.write(77);
         byte[] bytes = baos.toByteArray();
 
-        ByteArrayInputStream bais = new ByteArrayInputStream(baos.toByteArray());
+        ByteArrayInputStream bais = new ByteArrayInputStream(bytes);
         int read = bais.read();
+        int read1 = bais.read();
+        int read2 = bais.read();
+        int read3 = bais.read();
     }
 
     public static void main2(String[] args) {
@@ -251,9 +257,9 @@ public class Lesson1 {
         Files.move(src, dst);
     }
 
-    public static void main7(String[] args) throws IOException {
+    public static void main(String[] args) throws IOException {
         DirectoryStream<Path> dirs0 = Files.newDirectoryStream(Paths.get(""));
-        dirs0.forEach(System.out::println);
+        dirs0.forEach(path -> System.out.println(path));
         System.out.println("-----");
         DirectoryStream<Path> dirs1 = Files.newDirectoryStream(Paths.get("."));
         dirs1.forEach(System.out::println);
