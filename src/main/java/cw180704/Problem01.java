@@ -5,11 +5,11 @@ import java.util.Scanner;
 public class Problem01 {
 
     private static int convert1(String s) {
-        ;
+        return 0;
     }
 
     private static int convert2(String s, int defValue) {
-        ;
+        return 0;
     }
 
     public static void main(String[] args) {
