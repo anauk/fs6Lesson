@@ -3,6 +3,7 @@ package algorithms.simples;
 import java.util.Arrays;
 
 public class SimpleV4 {
+    //public int count = 0;
     private final int max;
     private final int min;
     private int simples[];
@@ -15,6 +16,7 @@ public class SimpleV4 {
     }
 
     private boolean restIsZero(int orig, int idx) {
+        //count++;
         return (orig % simples[idx]) == 0;
     }
 
