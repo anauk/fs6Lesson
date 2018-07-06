@@ -6,8 +6,8 @@ import java.util.Arrays;
 
 public class Problem1 {
     public static void main(String[] args) {
-        final int min=10000;
-        final int max=99999;
+        final int min=100;
+        final int max=101;
 
         SimpleV4 algorithm = new SimpleV4(min, max);
         int[] simples = algorithm.array();
