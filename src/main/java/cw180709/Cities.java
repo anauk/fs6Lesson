@@ -9,7 +9,7 @@ import java.util.Map;
 public class Cities {
     public static Map<Integer, City> read() throws IOException {
         HashMap<Integer, City> data = new HashMap<>();
-        BufferedReader r = new BufferedReader(new FileReader(new File(NumberIt.PATH, NumberIt.OUT)));
+        BufferedReader r = new BufferedReader(new FileReader(new File(NumberIt.PATH, NumberIt.CITIES_OUT_FORMATTED)));
         String line;
         while((line=r.readLine())!=null) {
             String[] s = line.split(":");
