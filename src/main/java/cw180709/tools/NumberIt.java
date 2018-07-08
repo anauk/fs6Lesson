@@ -1,4 +1,4 @@
-package cw180709;
+package cw180709.tools;
 
 import java.io.*;
 import java.util.function.Consumer;
@@ -6,7 +6,7 @@ import java.util.stream.Stream;
 
 public class NumberIt {
     private static final String PATH = "src/main/java/cw180709";
-    private static final String IN = "cities.txt";
+    private static final String IN = "draft/cities.txt";
     private static final String OUT = "citiesNumbered.txt";
     private static int counter=0;
 
@@ -17,7 +17,7 @@ public class NumberIt {
             @Override
             public void accept(final String s) {
                 try {
-                    w.write(String.format("%d:%s\n",++counter,s));
+                    w.write(String.format("%d:%s\n",++counter,s.trim()));
                 } catch (IOException e) {
                     e.printStackTrace();
                 }
