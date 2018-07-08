@@ -6,6 +6,8 @@ import cw180709.City;
 import java.io.*;
 import java.util.Comparator;
 import java.util.Map;
+import java.util.function.Supplier;
+import java.util.stream.Stream;
 
 public class TimetableGenerator {
     private static final String TIMETABLE_OUT = "timetable.txt";
@@ -18,6 +20,17 @@ public class TimetableGenerator {
         return (int)(Math.random()*60)*10;
     }
 
+    private static String flightNo() {
+        return Stream.generate(new Supplier<Character>() {
+            @Override
+            public Character get() {
+                return (char)(Math.random()*26+65);
+            }
+        })
+                .map(x->String.valueOf(x))
+                .limit(4).reduce("", (a,b)->(a+b));
+    }
+
     public static void main(String[] args) throws IOException {
         BufferedWriter w = new BufferedWriter(new FileWriter(new File(NumberIt.PATH, TIMETABLE_OUT)));
         final Map<Integer, City> cities = Cities.read();
@@ -25,7 +38,7 @@ public class TimetableGenerator {
         max--;
 
         for (int i = 0; i < cities.size(); i++) {
-            w.write(String.format("%d:%d:%d", city(max), city(max), length()));
+            w.write(String.format("%s:%d:%d:%d", flightNo(), city(max), city(max), length()));
             w.newLine();
         }
 
