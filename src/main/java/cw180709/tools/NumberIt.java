@@ -4,9 +4,9 @@ import java.io.*;
 import java.util.function.Consumer;
 
 public class NumberIt {
-    private static final String PATH = "src/main/java/cw180709";
+    public static final String PATH = "src/main/java/cw180709";
     private static final String IN = "draft/cities.txt";
-    private static final String OUT = "citiesNumbered.txt";
+    public static final String OUT = "citiesNumbered.txt";
     private static int counter=0;
 
     public static void main(String[] args) throws IOException {
