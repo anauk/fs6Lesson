@@ -7,10 +7,10 @@ import java.io.*;
 import java.util.Map;
 
 public class TimetableGenerator {
-    private static final String OUT = "timetable.txt";
+    private static final String TIMETABLE_OUT = "timetable.txt";
 
     public static void main(String[] args) throws IOException {
-        BufferedWriter w = new BufferedWriter(new FileWriter(new File(NumberIt.PATH, OUT)));
+        BufferedWriter w = new BufferedWriter(new FileWriter(new File(NumberIt.PATH, TIMETABLE_OUT)));
         final Map<Integer, City> cities = Cities.read();
 
 
