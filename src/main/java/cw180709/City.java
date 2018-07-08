@@ -21,4 +21,10 @@ public class City {
     public String toString() {
         return String.format("City{id=`%d`, name=`%s`}",id, name);
     }
+
+    // thi is test
+    public static void main(String[] args) {
+        City city = new City(1, "New York");
+        System.out.println(city);
+    }
 }
