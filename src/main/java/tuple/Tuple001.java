@@ -24,5 +24,6 @@ public class Tuple001 {
         Triplet<String, Integer, String> smart = house.setAt0("Smart");
         Pair<Double, String> objects = smart.removeFrom0().setAt0(1.1D);
         System.out.println(t1);
+        //kjbnkjbkjb.
     }
 }
