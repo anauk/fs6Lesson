@@ -5,13 +5,18 @@ import cw180709.City;
 
 import java.io.*;
 import java.util.Comparator;
-import java.util.List;
 import java.util.Map;
-import java.util.Set;
-import java.util.function.BiConsumer;
 
 public class TimetableGenerator {
     private static final String TIMETABLE_OUT = "timetable.txt";
+
+    private static int city(int max) {
+        return (int)(Math.random()*max+1);
+    }
+
+    private static int length() {
+        return (int)(Math.random()*60)*10;
+    }
 
     public static void main(String[] args) throws IOException {
         BufferedWriter w = new BufferedWriter(new FileWriter(new File(NumberIt.PATH, TIMETABLE_OUT)));
@@ -20,12 +25,9 @@ public class TimetableGenerator {
         max--;
 
         for (int i = 0; i < cities.size(); i++) {
-            String s = String.format(
-                    "%d:%d:%d", (int)(Math.random()*max+1), (int)(Math.random()*max+1), (int)((Math.random()*60)*10));
-            w.write(s);
+            w.write(String.format("%d:%d:%d", city(max), city(max), length()));
             w.newLine();
         }
-
 
         w.close();
     }
