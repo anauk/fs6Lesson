@@ -21,13 +21,8 @@ public class TimetableGenerator {
     }
 
     private static String flightNo() {
-        return Stream.generate(new Supplier<Character>() {
-            @Override
-            public Character get() {
-                return (char)(Math.random()*26+65);
-            }
-        })
-                .map(x->String.valueOf(x))
+        return Stream.generate(() -> (char)(Math.random()*26+65))
+                .map(String::valueOf)
                 .limit(4).reduce("", (a,b)->(a+b));
     }
 
