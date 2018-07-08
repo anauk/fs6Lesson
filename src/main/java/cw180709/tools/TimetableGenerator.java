@@ -17,11 +17,11 @@ public class TimetableGenerator {
         BufferedWriter w = new BufferedWriter(new FileWriter(new File(NumberIt.PATH, TIMETABLE_OUT)));
         final Map<Integer, City> cities = Cities.read();
         Integer max = cities.keySet().stream().max(Comparator.comparingInt(o -> o)).get();
-
+        max--;
 
         for (int i = 0; i < cities.size(); i++) {
             String s = String.format(
-                    "%d:%d:%d", (int)(Math.random()*max), (int)(Math.random()*max), (int)((Math.random()*60)*10));
+                    "%d:%d:%d", (int)(Math.random()*max+1), (int)(Math.random()*max+1), (int)((Math.random()*60)*10));
             w.write(s);
             w.newLine();
         }
