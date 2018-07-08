@@ -2,7 +2,6 @@ package cw180709.tools;
 
 import java.io.*;
 import java.util.function.Consumer;
-import java.util.stream.Stream;
 
 public class NumberIt {
     private static final String PATH = "src/main/java/cw180709";
