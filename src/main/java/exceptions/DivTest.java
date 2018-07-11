@@ -56,7 +56,7 @@ public class DivTest {
         }
     }
 
-    public static void main6(String[] args) {
+    public static void main6(String[] args) throws Exception {
         int i1=10;
         int i2=0;
         try {
@@ -64,10 +64,13 @@ public class DivTest {
             System.out.printf("%d/%d = %d", i1, i2, d.get());
         } catch (ArithmeticException e) {
             System.out.println("please don't divide by zero(((");
+            throw new Exception();
+        } finally {
+
         }
     }
 
-    public static void main9(String[] args) {
+    public static void main(String[] args) {
         try {
             int i = Integer.parseInt("11A");
             System.out.println(i);
@@ -76,7 +79,7 @@ public class DivTest {
         }
     }
 
-    public static void main(String[] args) {
+    public static void main99(String[] args) {
         Deque<Integer> dq = new LinkedList<>();
         //dq.add(13);
 

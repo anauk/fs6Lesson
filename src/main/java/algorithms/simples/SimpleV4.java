@@ -3,18 +3,20 @@ package algorithms.simples;
 import java.util.Arrays;
 
 public class SimpleV4 {
+    //public int count = 0;
     private final int max;
     private final int min;
     private int simples[];
     private int index =0;
 
-    SimpleV4(int min, int max) {
+    public SimpleV4(int min, int max) {
         this.max = max;
         this.min = min;
-        this.simples = new int[this.max/10];
+        this.simples = new int[this.max];
     }
 
     private boolean restIsZero(int orig, int idx) {
+        //count++;
         return (orig % simples[idx]) == 0;
     }
 
