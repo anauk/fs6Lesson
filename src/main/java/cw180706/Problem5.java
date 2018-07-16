@@ -1,7 +1,6 @@
 package cw180706;
 
 public class Problem5 {
-
     public static void main(String[] args) {
         //String origin = "Hello World!";
         String origin = "привет";
