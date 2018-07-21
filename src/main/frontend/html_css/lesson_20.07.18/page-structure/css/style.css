@@ -1,0 +1,103 @@
+body {
+    font-family: sans-serif;
+}
+
+.header-logo {
+    float: left;
+    color: #fff;
+}
+.header-logo::after {
+    content: "";
+    background-image: url("../img/arrow.png");
+    width: 10px;
+    height: 5px;
+    display: inline-block;
+}
+
+.header-logo a {
+    text-decoration: none;
+}
+
+.header-contacts {
+    float: right;
+}
+
+.container {
+    width: 1060px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.header {
+    background-color: rgba(255, 255, 255, 0.1);
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+
+.clearfix::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.bg-milan {
+    background-image: url("../img/bg-milan.jpg");
+    background-repeat: no-repeat;
+    
+}
+
+.header-contact-text {
+    color: #fff;
+    text-decoration: none;
+    display: inline-block;
+    margin-bottom: 5px;
+}
+.header-contact-text:first-child {
+    padding-left: 5px;
+}
+.header-contact-text:nth-child(2n+1) {
+    color: blue;
+}
+.header-contact-text:last-child {
+    font-size: 24px;
+}
+
+.logo-text {
+
+}
+
+.logo-small-text {
+    font-size: 18px;
+}
+
+.header-logo-text {
+    display: inline-block;
+    color:  #ffffff;
+    font-size: 29px;
+    font-weight: 700;
+    text-transform: uppercase;
+    line-height: 1;
+}
+
+.header-logo-text:hover {
+    color: #f26522;
+}
+
+.header-logo-text:link {
+    color: green;
+}
+
+.header-logo-small-text {
+    font-size: 18px;
+}
+
+
+
+.focus-example:hover {
+    background-color: forestgreen;
+}
+
+.focus-example:focus {
+    border: 3px solid #f26522;
+    outline: none;
+}
