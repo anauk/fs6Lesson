@@ -1,0 +1,55 @@
+/*
+.col {
+    background-color: navy;
+    display: inline-block;
+    width: 200px;
+    height: 200px;
+}
+*/
+
+.col1 {
+    width: 200px;
+    height: 200px;
+    display: inline-block;
+    background-color: aqua;
+    float: left
+}
+
+.col2 {
+    width: 200px;
+    height: 300px;
+    display: inline-block;
+    background-color: yellow;
+    float: left;
+}
+
+.col3 {
+    width: 200px;
+    height: 400px;
+    display: inline-block;
+    background-color: brown;
+    float: left;
+}
+
+.header {
+    height: 300px;
+}
+.block-example {
+    background-color: blueviolet;
+display: inline-block;
+    padding: 15px;
+    margin: 20px;
+    height: 200px;
+    width: 200px;
+}
+.link-example{
+    display: inline-block;
+    background-color: mediumvioletred;
+height: 100px;
+    padding: 15px;
+    margin: 20px;
+    
+}
+.row {
+    display: inline-block;
+}
