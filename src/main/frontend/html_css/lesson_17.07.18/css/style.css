@@ -1,0 +1,125 @@
+.header {
+    background-image: url("../img/header-bg.jpg");
+    background-repeat: no-repeat;
+    padding-top: 533px;
+    padding-bottom: 147px;
+}
+
+.box-test {
+    width: 300px;
+    height: 300px;
+    background-color: red;
+
+/*    box-sizing: border-box*/
+}
+
+.btn {
+    border: 2px solid black;
+    padding: 20px 30px;
+    background-color: green;
+    margin: 20px 30px;
+    text-decoration: none;
+    font-family: 'Roboto', sans-serif;
+    text-transform: uppercase;
+
+    display: inline-block;
+}
+
+.container {
+    width: 1170px;
+    margin: 0 auto;
+}
+
+.header-h2 {
+    color: #fff;
+    font-size: 48px;
+    font-weight: 700;
+    font-family: 'Montserrat', sans-serif;
+    text-transform: uppercase;
+    margin-bottom: 17px;
+}
+
+.hedader-h3 {
+    font-family: 'Lato', sans-serif;
+    font-size: 18px;
+    color: #fff;
+    margin-bottom: 27px;
+}
+
+.header-h1 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 54px;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: #fff;
+}
+
+.orange-text {
+    color: #f48e0b;
+    display: inline-block;
+    margin-left: 29px;
+    margin-right: 29px;
+}
+
+.btn-aqua {
+    display: inline-block;
+    padding-left: 40px;
+    padding-right: 40px;
+}
+
+header div p {
+    color: green;
+}
+
+#color-yellow {
+    color: yellow;
+}
+
+.color-blue {
+    color: blue;
+}
+
+#color-yellow .color-blue.text-left {
+    color: red;
+}
+
+.left-col {
+    width: 200px;
+    height: 300px;
+    background-color: red;
+    float: left;
+    display: inline-block;
+}
+
+.content {
+    width: 400px;
+    height: 500px;
+    background-color: green;
+/*    float: left;*/
+    margin-left: 30px;
+    margin-right: 30px;
+    
+}
+
+.right-col {
+    width: 200px;
+    height: 200px;
+    background-color: yellow;
+/*    float: left;*/
+}
+
+.main {
+    background-image: url("../img/header-bg.jpg");
+}
+
+
+
+.clearfix::after {
+    content: "";
+    display: table;
+    clear: both;    
+}
+.normal-block {
+    height: 50px;
+    background-color: aqua;
+}
