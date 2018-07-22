@@ -1,0 +1,47 @@
+.clearfix::after {
+    content: '';
+    display: table;
+    clear: both;
+}
+.static-block {
+    float: left;
+    width: 200px;
+    height: 400px;
+    background-color: blue;
+    color: #fff;
+    font-size: 28px;
+    line-height: 400px;
+    text-align: center;
+}
+
+.relative-block {
+    float: left;
+    width: 200px;
+    height: 400px;
+    background-color: green;   
+    position: relative;
+    color: #fff;
+    font-size: 28px;
+    line-height: 400px;
+    text-align: center;
+    top: 20px;
+    left: 20px; 
+}
+
+.absolute-block {
+    float: left;
+    width: 200px;
+    height: 400px;
+    background-color: red;   
+    position: absolute;
+    color: #fff;
+    font-size: 28px;
+    top: 20px;
+    line-height: 400px;
+    text-align: center;   
+}
+
+.absolute-example {
+    margin-top: 50px;
+    position: relative;
+}
