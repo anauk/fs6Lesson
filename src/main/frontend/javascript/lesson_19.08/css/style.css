@@ -1,0 +1,10 @@
+
+.table {
+    margin-top: 10px;
+    margin-left: 10px;    
+}
+
+.table td {
+    border: solid 1px black;
+    padding: 5px;
+}
