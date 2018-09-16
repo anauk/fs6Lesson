@@ -43,7 +43,7 @@ public class Overload {
         return a+b+c;
     }
 
-    public int add (int a, int...others){
+    public int add (int a, int... others){
         int sum = a;
         for (int other : others) {
             sum += other;
@@ -91,8 +91,20 @@ public class Overload {
     }
 
 
+    public int add(short a, short b) {
+        return a+b;
+    }
+
     public int add(int a, int b) {
         return a+b;
+    }
+
+    public int add(long a, long b) {
+        return (int)(a+b);
+    }
+
+    public int add(int... a) {
+        return 0;
     }
 
     public int add41 (int a, int b, int c, int d){
@@ -108,6 +120,9 @@ public class Overload {
     }
 
     public static void main(String[] args) {
+        new Overload().add((short)1,(short)2);
+        new Overload().add(1L,2);
+
         Overload o1 = new Overload(1, 2, 3, 4);
         Overload o2 = Overload.buildABCD(1,2,3,4);
 
@@ -120,12 +135,12 @@ public class Overload {
         int c = add1(1,2);
         int d = instance.add(1,2, 3);
 
-        int e = instance.add(1,2, 3, 4);
+        //int e = instance.add(1, 2, 3, 4);
 
-        System.out.println(instance.add(1));
+        //System.out.println(instance.add(1));
         System.out.println(instance.add(1,2));
 
-        int i9 = instance.add(1,2,3,4,5,6,7,8,9);
+        //int i9 = instance.add(1,2,3,4,5,6,7,8,9);
 
     }
 
