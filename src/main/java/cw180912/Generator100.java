@@ -2,7 +2,6 @@ package cw180912;
 
 import java.io.*;
 import java.util.ArrayList;
-import java.util.function.Consumer;
 
 public class Generator100 {
   static final int from = 'a';
